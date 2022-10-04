@@ -1,0 +1,29 @@
+.showcase-bottom{
+    .content-holder{
+        display: flex;
+        justify-content: center;
+        margin: 4rem 0;
+    
+        .img-holder{
+            position: relative;
+        }
+
+        .text-holder{
+            position: absolute;
+            left: 5%;
+            bottom: 20%;
+        }
+
+        h1{
+            font-weight: $font-weight-bold;
+            font-size: 2.81rem;
+            margin-bottom: 1.5rem;
+        }
+
+        p{
+            width: 45%;
+            margin-bottom: 2rem;
+        }
+    }
+
+}
