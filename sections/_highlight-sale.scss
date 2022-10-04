@@ -1,0 +1,26 @@
+.highlight-sale{
+    .container{
+        background-color: $color-grey-70;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        
+        h1{
+            font-size: $font-size-45;
+            font-weight: $font-weight-bold;
+            color: $color-white;
+            margin-bottom: 1rem;
+        }
+
+        h2{
+            font-size: $font-size-20;
+            font-weight: $font-weight-bold;
+            color: $color-white;
+            margin-bottom: 3rem;
+        }
+    }
+}
