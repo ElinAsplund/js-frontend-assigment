@@ -1,3 +1,6 @@
+@import "./core/variables";
+@import "./core/breakpoints";
+
 *{
     padding: 0;
     margin: 0;
@@ -5,5 +8,6 @@
 }
 
 body{
-    background-color: aqua;
+    background-color: $color-theme;
+    font-family: 'Poppins', sans-serif;
 }
