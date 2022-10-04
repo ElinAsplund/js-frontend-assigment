@@ -12,13 +12,13 @@
             text-align: center;
 
             h1{
-                font-size: 4.06rem;
+                font-size: $font-size-65;
                 font-weight: $font-weight-extrabold;
                 margin-bottom: 2rem;
             }
 
             p{
-                font-size: 1.25rem;
+                font-size: $font-size-20;
                 margin-bottom: 2rem;
             }
         }

@@ -5,6 +5,8 @@
 
 @import "./sections/showcase-top";
 @import "./sections/showcase-bottom";
+@import "./sections/top-picks";
+@import "./sections/webshop-info";
 
 *{
     padding: 0;
@@ -16,4 +18,5 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     font-weight: $font-weight-regular;
+    color: $color-dark;
 }

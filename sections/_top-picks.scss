@@ -1,0 +1,34 @@
+.top-picks{
+    .content-holder{
+        display: flex;
+        justify-content: center;
+        margin: 4rem 0;
+    
+        .img-holder{
+            position: relative;
+            margin: 0.94rem;
+        }
+        
+        h1{
+            font-weight: $font-weight-bold;
+            font-size: $font-size-45;
+            margin-bottom: 1.5rem;
+        }
+
+        #text-holder-left{
+            position: absolute;
+            right: 10%;
+            bottom: 30%;
+
+            h1{
+                color: $color-white;
+            }
+        }
+
+        #text-holder-right{
+            position: absolute;
+            left: 10%;
+            bottom: 30%;
+        }
+    }
+}
