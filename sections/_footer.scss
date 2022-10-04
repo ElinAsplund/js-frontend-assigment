@@ -1,0 +1,36 @@
+footer{
+    background-color: $color-grey-10;
+    border-top: 1px solid $color-grey-40;
+
+    .container-fluid{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        .icon-holder{
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+
+            a{
+                margin: 0 0.7rem;
+                color: $color-dark;
+
+                &:hover{
+                    color: $color-theme;
+                }
+
+                i{
+                    font-size: 1.1rem;
+                }
+            }
+        }
+
+        p{
+            margin: 0;
+        }
+    }
+}
