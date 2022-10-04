@@ -1,6 +1,10 @@
 @import "./core/variables";
 @import "./core/breakpoints";
 
+@import "./components/button";
+
+@import "./sections/showcase";
+
 *{
     padding: 0;
     margin: 0;
@@ -8,6 +12,7 @@
 }
 
 body{
-    background-color: $color-theme;
     font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: $font-weight-regular;
 }

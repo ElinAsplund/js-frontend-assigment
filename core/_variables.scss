@@ -5,9 +5,14 @@
 $color-theme: #FF7373;
 $color-dark: #23262A;
 $color-white: #FFFFFF;
-$color-grey-10: #F5F5F5;
-$color-grey-20: #BEBEBE;
-$color-grey-30: #616365;
+$color-grey-10: #F8F8F8;
+$color-grey-20: #F5F5F5;
+$color-grey-30: #EDEDED;
+$color-grey-40: #CDCED0;
+$color-grey-50: #BEBEBE;
+$color-grey-60: #BBBBBB;
+$color-grey-70: #7E7F80;
+$color-grey-80: #616365;
 
 /* font */
 $font-poppins: 'Poppins', sans-serif;
@@ -16,12 +21,14 @@ $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 $font-weight-extrabold: 800;
+$font-size-13: 1.08rem;
 $font-size-14: 1.17rem;
 $font-size-16: 1.33rem;
-$font-size-18: 1.50rem;
+$font-size-20: 1.67rem;
 $font-size-24: 2rem;
-$font-size-36: 3rem;
-$font-size-60: 5rem;
+$font-size-35: 2.92rem;
+$font-size-45: 3.75rem;
+$font-size-65: 5.42rem;
 
 /* border */
 $border-radius-small: 8px;

@@ -1,0 +1,89 @@
+button{
+    font-weight: $font-weight-semibold;
+    border: none;
+    padding: 1rem 3rem;
+    color: $color-white;
+    position: relative;
+    
+    &::before,
+    &::after{
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+    }
+
+    &::before{
+        left: 7px;
+        top: 7px;
+        border-left:2px solid $color-white;
+        border-top:2px solid $color-white;
+    }
+    &::after{
+        right: 7px;
+        bottom: 7px;
+        border-right: 2px solid $color-white;
+        border-bottom: 2px solid $color-white;
+    }
+    //my reference on how to make the white border corners: https://stackoverflow.com/questions/60466314/how-to-do-a-partial-border-for-a-button-in-css
+
+
+    &.btn-bg-theme{
+        background-color: $color-theme;
+        transition: 0.2s ease-in-out;
+        
+        &:hover{
+            background-color: $color-dark;
+        }
+    }
+
+    &.btn-bg-dark{
+        background-color: $color-dark;
+        color: $color-white;
+        transition: 0.2s ease-in-out;
+        
+        &:hover{
+            background-color: $color-white;
+            color: $color-dark;
+            
+            &::before{
+                border-left-color: $color-dark;
+                border-top-color: $color-dark;
+            }
+            &::after{
+                border-right-color: $color-dark;
+                border-bottom-color: $color-dark;
+            }
+        }
+
+    }
+
+    &.btn-bg-white{
+        background-color: $color-white;
+        color: $color-dark;
+        transition: 0.2s ease-in-out;
+
+        &::before{
+            border-left-color: $color-dark;
+            border-top-color: $color-dark;
+        }
+        &::after{
+            border-right-color: $color-dark;
+            border-bottom-color: $color-dark;
+        }
+
+        &:hover{
+            background-color: $color-theme;
+            color: $color-white;
+            
+            &::before{
+                border-left-color: $color-white;
+                border-top-color: $color-white;
+            }
+            &::after{
+                border-right-color: $color-white;
+                border-bottom-color: $color-white;
+            }
+        }
+    }
+}
