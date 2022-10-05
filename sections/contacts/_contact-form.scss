@@ -1,0 +1,70 @@
+.contact-form{
+    .container{
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        
+        .form-holder{
+            h1{
+                font-size: $font-size-18;
+                font-weight: $font-weight-bold;
+                margin-bottom: 1.5rem;
+            }
+
+            form{
+
+                .grid{
+                    display: grid;
+                    width: 100%;
+                    height: 250px;
+                    gap: 1.5rem;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr 5fr;
+
+                    input{
+                        padding: 0.5rem 1rem;
+                        border: solid 1px $color-grey-40;
+
+                        &:focus{
+                            outline-color: $color-grey-40;
+                        }
+                    }
+                    
+                    textarea{
+                        padding: 0.5rem 1rem;
+                        line-height: normal;
+                        border: solid 1px $color-grey-40;
+                        resize: none;
+                        height: 100%;
+
+                        &:focus{
+                            outline-color: $color-grey-40;
+                        }
+                    }
+                }
+
+                button{
+                    margin-top: 1.5rem;
+
+                    &::before,
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#user-name{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+#user-email{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+#user-comments{
+    grid-column: 1/-1;
+    grid-row: 2/3;
+}
