@@ -4,9 +4,9 @@
 @import "./components/button";
 @import "./components/small-card";
 @import "./components/mini-card";
+@import "./components/header";
+@import "./components/footer";
 
-@import "./sections/header";
-@import "./sections/footer";
 @import "./sections/index/showcase-top";
 @import "./sections/index/showcase-bottom";
 @import "./sections/index/featured-products";
@@ -30,6 +30,7 @@
     color: $color-dark;
 }
 
+// To change header background color easier
 .bg-white{
     background-color: $color-white;
 }
