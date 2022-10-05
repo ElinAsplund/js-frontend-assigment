@@ -1,0 +1,75 @@
+header{
+    background-color: $color-grey-30;
+
+    nav{
+        width: 1680px;
+        height: 4rem;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a{
+            height:min-content;
+        }
+
+        .nav-links{
+            display: flex;
+            align-items: center;
+
+            a{
+                color: $color-dark;
+                text-decoration: none;
+                font-weight: $font-weight-medium;
+                margin: 0 2rem;
+
+                &:hover{
+                    color: $color-theme;
+                }
+            }
+        }
+
+        .nav-icons{
+            display: flex;
+            align-items: center;
+
+            .circle{
+                background-color: $color-white;
+                width: 36px;
+                height: 36px;
+                border-radius: $border-radius-rounded;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                filter: drop-shadow(0 5px 5px $color-grey-60);
+                transition: 0.2s ease-in-out;
+                margin: 0 0.8rem;
+                position: relative;
+                &:first-child{
+                    margin-left: 0rem;
+                }
+                &:last-child{
+                    margin-right: 0rem;
+                }
+
+                &:hover{
+                    background-color: $color-dark;
+
+                    img{
+                        filter: invert(93%) sepia(0%) saturate(7474%) hue-rotate(61deg) brightness(107%) contrast(107%);                        
+                    // I used this generator: 
+                    // https://codepen.io/sosuke/pen/Pjoqqp
+                    }
+                }
+
+                .badge{
+                    position: absolute;
+                    background-color: $color-theme;
+                    top: -5px;
+                    right: -10px;
+                }
+            }
+
+        }
+    }
+}

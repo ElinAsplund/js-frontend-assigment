@@ -40,22 +40,22 @@
                 filter: drop-shadow(0 5px 5px $color-grey-60);
                 transition: 0.2s ease-in-out;
 
-                    &:first-child{
-                        margin-bottom: 0.6rem;
-                    }
-                    &:last-child{
-                        margin-top: 0.6rem;
-                    }
+                &:first-child{
+                    margin-bottom: 0.6rem;
+                }
+                &:last-child{
+                    margin-top: 0.6rem;
+                }
 
-                    &:hover{
-                        background-color: $color-dark;
+                &:hover{
+                    background-color: $color-dark;
 
-                        img{
-                            filter: invert(93%) sepia(0%) saturate(7474%) hue-rotate(61deg) brightness(107%) contrast(107%);                        
-                        // I used this generator: 
-                        // https://codepen.io/sosuke/pen/Pjoqqp
-                        }
+                    img{
+                        filter: invert(93%) sepia(0%) saturate(7474%) hue-rotate(61deg) brightness(107%) contrast(107%);                        
+                    // I used this generator: 
+                    // https://codepen.io/sosuke/pen/Pjoqqp
                     }
+                }
             }
         }
         button{
