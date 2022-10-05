@@ -77,6 +77,8 @@
 
     }
     .star-holder{
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
 
         i{
             color: $color-theme;
@@ -85,6 +87,7 @@
     p{
         font-size: $font-size-18;
         font-weight: $font-weight-semibold;
+        margin: 0;
 
         span{
             font-size: $font-size-16;
