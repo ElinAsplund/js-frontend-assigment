@@ -1,6 +1,8 @@
 .showcase-top{
-    .container-fluid{
-        background-color: $color-grey-30;
+    background-color: $color-grey-30;
+    .content-holder{
+        width: 1680px;
+        margin: auto;
         display: flex;
         justify-content: space-between;
 

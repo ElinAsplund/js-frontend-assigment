@@ -1,0 +1,21 @@
+.featured-products{
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3{
+            font-size: $font-size-20;
+            font-weight: $font-weight-bold;
+            margin-bottom: 1.5rem;
+        }
+        .grid{
+            display: grid;
+            width: 100%;
+            height: 100%;
+            gap: 2rem;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1 fr);
+        }
+    }
+}
