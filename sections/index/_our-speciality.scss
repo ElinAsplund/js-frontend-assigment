@@ -44,6 +44,14 @@
         
                         &:hover{
                             color: $color-theme;
+
+                            i{
+                                color: $color-theme;
+                            }
+                        }
+
+                        i{
+                            text-decoration: underline;
                         }
                     }
                 }
