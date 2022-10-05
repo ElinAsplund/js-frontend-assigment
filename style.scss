@@ -6,16 +6,19 @@
 @import "./components/mini-card";
 
 @import "./sections/header";
-@import "./sections/showcase-top";
-@import "./sections/showcase-bottom";
-@import "./sections/featured-products";
-@import "./sections/top-picks";
-@import "./sections/our-speciality";
-@import "./sections/two-for-price-of";
-@import "./sections/highlight-sale";
-@import "./sections/chosen-categories";
-@import "./sections/webshop-info";
 @import "./sections/footer";
+@import "./sections/index/showcase-top";
+@import "./sections/index/showcase-bottom";
+@import "./sections/index/featured-products";
+@import "./sections/index/top-picks";
+@import "./sections/index/our-speciality";
+@import "./sections/index/two-for-price-of";
+@import "./sections/index/highlight-sale";
+@import "./sections/index/chosen-categories";
+@import "./sections/index/webshop-info";
+
+@import "./sections/contacts/page-title";
+@import "./sections/contacts/contact-form";
 
 *{
     padding: 0;
@@ -25,4 +28,8 @@
     font-size: 1rem;
     font-weight: $font-weight-regular;
     color: $color-dark;
+}
+
+.bg-white{
+    background-color: $color-white;
 }

@@ -1,0 +1,15 @@
+.page-title{
+    .container{
+        display: flex;
+        align-items: center;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+
+        h1{
+            font-weight: $font-weight-medium;
+            font-size: $font-size-16;
+            margin: 0;
+            margin-left: 0.5rem;
+        }
+    }
+}
