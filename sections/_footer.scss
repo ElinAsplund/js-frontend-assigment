@@ -17,14 +17,13 @@ footer{
 
             a{
                 margin: 0 0.7rem;
-                color: $color-dark;
-
-                &:hover{
-                    color: $color-theme;
-                }
 
                 i{
-                    font-size: 1.1rem;
+                    font-size: 1.2rem;
+
+                    &:hover{
+                        color: $color-theme;
+                    }
                 }
             }
         }
