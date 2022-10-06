@@ -1,0 +1,40 @@
+.product-overview{
+
+    .grid {  
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 1.5em 1.5em;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "lg-placeholder-area lg-placeholder-area lg-placeholder-area product-order-overview product-order-overview product-order-overview"
+          "lg-placeholder-area lg-placeholder-area lg-placeholder-area product-order-overview product-order-overview product-order-overview"
+          "lg-placeholder-area lg-placeholder-area lg-placeholder-area product-order-overview product-order-overview product-order-overview"
+          ". . . product-order-overview product-order-overview product-order-overview";
+        margin-bottom: 1.5rem;
+
+        .lg-placeholder-area { 
+            grid-area: lg-placeholder-area;
+            background-color: $color-grey-20;
+            transition: 0.2s ease-in-out;
+
+                &:hover{
+                    background-color: $color-grey-40;
+                }
+        }
+
+        .product-order-overview { 
+            grid-area: product-order-overview; 
+        }
+
+        .sm-placeholder-area{
+            background-color: $color-grey-20;
+            height: 150px;
+            transition: 0.2s ease-in-out;
+
+                &:hover{
+                    background-color: $color-grey-40;
+                }
+        }
+    }   
+}

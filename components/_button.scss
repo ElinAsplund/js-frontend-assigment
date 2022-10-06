@@ -87,3 +87,14 @@ button{
         }
     }
 }
+
+.no-corners{
+    button{
+        margin-top: 1.5rem;
+    
+        &::before,
+        &::after{
+            display: none;
+        }
+    }
+}
