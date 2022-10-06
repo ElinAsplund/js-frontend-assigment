@@ -6,6 +6,7 @@
 @import "./components/mini-card";
 @import "./components/header";
 @import "./components/footer";
+@import "./components/page-title";
 
 @import "./sections/index/showcase-top";
 @import "./sections/index/showcase-bottom";
@@ -17,8 +18,9 @@
 @import "./sections/index/chosen-categories";
 @import "./sections/index/webshop-info";
 
-@import "./sections/contacts/page-title";
 @import "./sections/contacts/contact-form";
+
+@import "./sections/product-page/current-offer-banner";
 
 *{
     padding: 0;
@@ -30,7 +32,7 @@
     color: $color-dark;
 }
 
-// To change header background color easier
+// To change header background-color easier
 .bg-white{
     background-color: $color-white;
 }

@@ -1,0 +1,27 @@
+.current-offer-banner{
+
+    .container{
+        .heading-holder{
+            filter: drop-shadow(0 0 5px $color-grey-20);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 0.5rem 0;
+            background-color: $color-white;
+
+            a{
+                color: $color-theme;
+                font-size: $font-size-16;
+                font-weight: $font-weight-medium;
+                margin: 0;
+                text-decoration: none;
+                transition: 0.2s ease-in-out;
+
+                &:hover{
+                    color: $color-dark;
+                }
+            }
+        }
+    }
+}
