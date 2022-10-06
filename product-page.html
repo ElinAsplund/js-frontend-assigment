@@ -67,7 +67,7 @@
                 <div class="sm-placeholder-area"></div>
                 <div class="product-order-overview">
                     <h1>Modern Black Blouse</h1>
-                    <p>SKU: 12345670 <span>BRAND: The Northland</span></p>
+                    <p class="small-print">SKU: 12345670 <span>BRAND: The Northland</span></p>
                     <div class="star-holder">
                         <i class="fa-sharp fa-solid fa-star"></i>
                         <i class="fa-sharp fa-solid fa-star"></i>
@@ -78,14 +78,26 @@
                     <h2>$35.00</h2>
                     <p>Discovered had get considered projection who favourable. Necessary up knowledge it tolerably. Unwilling departure education is be dashwoods or an. Use off agreeable law unwilling sir deficient curiosity instantly. (<a href="#">read more</a>)</p>
                     <form>
-                        <label for="size" class="d-block">Size:</label>
-                        <label for="color" class="d-block">Color:</label>
-                        <label for="qty" class="d-block">Qty:</label>
-                        <div class="no-corners"><button class="btn-bg-theme" type="submit">ADD TO CART</button></div>
+                        <div class="form-grid">
+                            <label for="size" class="size d-block">Size:</label>
+                            <div class="size-button-holder no-corners">
+                                <button class="size-button me-1">S</button>
+                                <button class="size-button me-1">M</button>
+                                <button class="size-button me-1">L</button>
+                                <button class="size-button">XL</button>
+                            </div>
+                            <label for="color" class="color d-block">Color:</label>
+                            <input type="text">
+                            <label for="qty" class="qty">Qty:</label>
+                            <div class="qty-holder">
+                                <input type="text">
+                                <div class="no-corners"><button class="btn-bg-theme" type="submit">ADD TO CART</button></div>
+                            </div>
+                        </div>
                     </form>
                     <div class="social-media">
                         <p>Share:</p>
-                        <div class="circle">
+                        <div class="circle ms-4">
                             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                         </div>
                         <div class="circle">

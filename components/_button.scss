@@ -89,9 +89,7 @@ button{
 }
 
 .no-corners{
-    button{
-        margin-top: 1.5rem;
-    
+    button{    
         &::before,
         &::after{
             display: none;
