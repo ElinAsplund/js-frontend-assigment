@@ -1,0 +1,48 @@
+.related-products{
+    margin-bottom: 6rem;
+
+    .related-products-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        h1{
+            font-size: $font-size-20;
+            font-weight: $font-weight-bold;
+        }
+        
+        .scroll-arrows-holder{
+            display: flex;
+            
+            .scroll-arrow{
+                background-color: $color-white;
+                width: 25px;
+                height: 25px;
+                border-radius: $border-radius-rounded;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                filter: drop-shadow(0 0px 3px $color-grey-40);
+                padding: 0;
+                margin-left: 1rem;
+                transition: 0.1s ease-in-out;
+                
+                &:hover{
+                    background-color: $color-dark;
+                    i{
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+    .grid{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        gap: 2rem;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+    }
+}
