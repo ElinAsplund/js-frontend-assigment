@@ -33,17 +33,9 @@ header{
             display: flex;
             align-items: center;
 
-            .circle{
-                background-color: $color-white;
-                width: 36px;
-                height: 36px;
-                border-radius: $border-radius-rounded;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                filter: drop-shadow(0 5px 5px $color-grey-40);
-                transition: 0.2s ease-in-out;
+            a{
                 margin: 0 0.8rem;
+
                 &:first-child{
                     margin-left: 0rem;
                 }
@@ -51,24 +43,35 @@ header{
                     margin-right: 0rem;
                 }
 
-                &:hover{
-                    background-color: $color-dark;
-
-                    img{
-                        filter: invert(93%) sepia(0%) saturate(7474%) hue-rotate(61deg) brightness(107%) contrast(107%);                        
-                    // I used this generator: 
-                    // https://codepen.io/sosuke/pen/Pjoqqp
+                .circle{
+                    background-color: $color-white;
+                    width: 36px;
+                    height: 36px;
+                    border-radius: $border-radius-rounded;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    filter: drop-shadow(0 5px 5px $color-grey-40);
+                    transition: 0.2s ease-in-out;
+    
+                    &:hover{
+                        background-color: $color-dark;
+    
+                        img{
+                            filter: invert(93%) sepia(0%) saturate(7474%) hue-rotate(61deg) brightness(107%) contrast(107%);                        
+                        // I used this generator: 
+                        // https://codepen.io/sosuke/pen/Pjoqqp
+                        }
+                    }
+    
+                    .badge{
+                        position: absolute;
+                        background-color: $color-theme;
+                        top: -5px;
+                        right: -10px;
                     }
                 }
-
-                .badge{
-                    position: absolute;
-                    background-color: $color-theme;
-                    top: -5px;
-                    right: -10px;
-                }
             }
-
         }
     }
 }
