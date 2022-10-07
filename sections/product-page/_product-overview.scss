@@ -4,7 +4,7 @@
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        gap: 1.5em 1.5em;
+        gap: 1.5rem;
         grid-auto-flow: row;
         grid-template-areas:
           "lg-placeholder-area lg-placeholder-area lg-placeholder-area product-order-overview product-order-overview product-order-overview"
@@ -67,8 +67,8 @@
             form{
                 .form-grid{
                     display: grid;
-                    grid-template-columns: 1fr 10fr;
-                    grid-template-rows: 1fr 1fr;
+                    grid-template-columns: 1fr 8fr;
+                    grid-template-rows: 1fr 1fr 1fr;
                     gap: 1.5rem;
                     align-items: center;
 
@@ -103,8 +103,43 @@
 
                     .qty-holder{
                         display: flex;
+                        font-weight: $font-weight-semibold;
 
-                        button{
+                        .qty-selector{
+                            display: flex;
+
+                            .btn-qty{
+                                background-color: $color-white;
+                                color: $color-dark;
+                                border: solid $color-dark 1px;
+                                margin: 0;
+                                padding: 0 1rem;
+                                height: 100%;
+                                font-size: $font-size-24;
+                                transition: 0.2s ease-in-out;
+
+                                &:hover{
+                                    background-color: $color-dark;
+                                    color: $color-white;
+                                }
+                            }
+
+                            #qty-value{
+                                text-align: center;
+                                width: 4rem;
+                                height: 100%;
+                                border: none;
+                                border-top: 1px $color-dark solid;
+                                border-bottom: 1px $color-dark solid;
+
+                                &:focus{
+                                    outline: 0;
+                                    box-shadow: 0;
+                                }
+                            }
+                        }
+
+                        .btn-add-to-cart{
                             margin-left: 1.5rem;
                         }
                     }
@@ -113,32 +148,37 @@
             .social-media{
                 display: flex;
                 align-items: center;
-                margin-top: 1.5rem;
+                margin-top: 2rem;
 
                 p{
                     margin: 0;
                     font-weight: $font-weight-medium;
                 }
 
-                a{
-                    text-decoration: none;
+                .social-media-holder{
+                    display: flex;
+                    margin-left: 2rem;
 
-                    .circle{
-                        background-color: $color-grey-20;
-                        width: 36px;
-                        height: 36px;
-                        border-radius: $border-radius-rounded;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        transition: 0.2s ease-in-out;
-                        margin: 0 0.3rem;
+                    a{
+                        text-decoration: none;
     
-                        &:hover{
-                            background-color: $color-dark;
-        
-                            i{
-                                color: $color-white;
+                        .circle{
+                            background-color: $color-grey-20;
+                            width: 36px;
+                            height: 36px;
+                            border-radius: $border-radius-rounded;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            transition: 0.2s ease-in-out;
+                            margin: 0 0.5rem;
+    
+                            &:hover{
+                                background-color: $color-dark;
+            
+                                i{
+                                    color: $color-white;
+                                }
                             }
                         }
                     }
@@ -155,5 +195,5 @@
                     background-color: $color-grey-40;
                 }
         }
-    }   
+    }
 }

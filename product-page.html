@@ -104,41 +104,49 @@
                               </select>
                             <label for="qty" class="qty">Qty:</label>
                             <div class="qty-holder">
-                                <input type="text">
-                                <div class="no-corners"><button class="btn-bg-theme" type="submit">ADD TO CART</button></div>
+                                <div class="qty-selector">
+                                    <div class="no-corners"><button class="btn-qty" id="decrement-btn">-</button></div>
+                                    <input type="text" value="1" id="qty-value">
+                                    <div class="no-corners"><button class="btn-qty" id="increment-btn">+</button></div>
+                                </div>
+                                <div class="no-corners">
+                                    <button class="btn-bg-theme btn-add-to-cart" type="submit">ADD TO CART</button>
+                                </div>
                             </div>
                         </div>
                     </form>
                     <div class="social-media">
                         <p>Share:</p>
-                        <a href="#">
-                            <div class="circle ms-4">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="circle">
-                                <i class="fa-brands fa-instagram"></i>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="circle">
-                                <i class="fa-brands fa-twitter"></i>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="circle">
-                                <i class="fa-brands fa-google"></i>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="circle">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </div>
-                        </a>
+                        <div class="social-media-holder">
+                            <a href="#">
+                                <div class="circle">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="circle">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="circle">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="circle">
+                                    <i class="fa-brands fa-google"></i>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="circle">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
-              </div>
+            </div>
         </div>
     </section>
     <!-- product-in-depth-info -->
