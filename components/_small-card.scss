@@ -29,31 +29,34 @@
             top: 0.6rem;
             transition: 0.3s ease-in-out;
 
-            .circle{
-                background-color: $color-white;
-                width: 36px;
-                height: 36px;
-                border-radius: $border-radius-rounded;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                filter: drop-shadow(0 5px 5px $color-grey-60);
-                transition: 0.2s ease-in-out;
+            a{
 
-                &:first-child{
-                    margin-bottom: 0.6rem;
-                }
-                &:last-child{
-                    margin-top: 0.6rem;
-                }
+                .circle{
+                    background-color: $color-white;
+                    width: 36px;
+                    height: 36px;
+                    border-radius: $border-radius-rounded;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    filter: drop-shadow(0 5px 5px $color-grey-60);
+                    transition: 0.2s ease-in-out;
 
-                &:hover{
-                    background-color: $color-dark;
+                    &:first-child{
+                        margin-bottom: 0.6rem;
+                    }
+                    &:last-child{
+                        margin-top: 0.6rem;
+                    }
 
-                    img{
-                        filter: invert(93%) sepia(0%) saturate(7474%) hue-rotate(61deg) brightness(107%) contrast(107%);                        
-                    // I used this generator: 
-                    // https://codepen.io/sosuke/pen/Pjoqqp
+                    &:hover{
+                        background-color: $color-dark;
+    
+                        img{
+                            filter: invert(93%) sepia(0%) saturate(7474%) hue-rotate(61deg) brightness(107%) contrast(107%);                        
+                        // I used this generator: 
+                        // https://codepen.io/sosuke/pen/Pjoqqp
+                        }
                     }
                 }
             }
