@@ -51,7 +51,7 @@ header{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    filter: drop-shadow(0 5px 5px $color-grey-40);
+                    filter: drop-shadow(0 2px 5px $color-grey-40);
                     transition: 0.2s ease-in-out;
     
                     &:hover{

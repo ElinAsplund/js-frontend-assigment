@@ -35,7 +35,17 @@
     color: $color-dark;
 }
 
-// To change header background-color easier
+// To change header background-color and drop-shadow easier
 .bg-white{
     background-color: $color-white;
+
+    nav{
+        .nav-icons{
+            a{
+                .circle{
+                    filter: drop-shadow(0 2px 5px $color-grey-30);
+                }
+            }
+        }
+    }
 }
