@@ -91,6 +91,16 @@
                         }
                     }
 
+                    .form-select{
+                        border: 1px $color-dark solid;
+                        width: 40%;
+                        border-radius: 0;
+
+                        &:focus{
+                            box-shadow: 0 0 0 0.1rem $color-grey-60;
+                        }
+                    }
+
                     .qty-holder{
                         display: flex;
 
