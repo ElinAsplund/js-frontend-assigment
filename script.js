@@ -49,7 +49,7 @@ const isEmailValid = email => {
 // }
 // på traditionell funktion: kan inte sätta const på!
 
-
+// onSubmit-event for form on contact.html page
 const onSubmit = event => {
     let error = ""
     let success = true
@@ -59,15 +59,14 @@ const onSubmit = event => {
     for (let element of event.target) {
         error = ""
         if (element.required) {
-            // let lable = document.getElementById(`${element.id}-lable`).innerText;
+            let label = document.getElementById(`${element.id}-label`).innerText
 
             switch (element.type) {
 
                 case 'text':
                     if (!isNullOrEmpty(element.value)) {
                         if (!isMinimumLength(element.value, 2)) {
-                            error = `Your name must contain at least 2 letters.`
-                            // ${lable.toLowerCase()} 
+                            error = `Your ${label.toLocaleLowerCase()} must contain at least 2 letters.`
                             console.log(error);
                         } else {
                             console.log("Success!");
@@ -81,27 +80,26 @@ const onSubmit = event => {
                 case 'email':
                     if (!isNullOrEmpty(element.value)) {
                         if (!isEmailValid(element.value)) {
-                            error = `Your email must be valid (eg. example@domain.com).`
-                            // ${lable.toLowerCase()} 
+                            error = `Your ${label.toLocaleLowerCase()} must be valid (eg. example@domain.com).`
                             console.log(error);
                         } else {
                             console.log("Success!");
                         }
                     } else {
-                        error = `Please enter a valid email!`
+                        error = `Please enter an email!`
                         console.log(error);
                     }
                     break;
 
                 case 'textarea':
                     if (!isNullOrEmpty(element.value)) {
-                        if (!isMinimumLength(element.value, 10)) {
-                            error = `Your comment must contain at least 10 characters.`
-                            // ${lable.toLowerCase()} 
-                            console.log(error);
-                        } else {
-                            console.log("Success!");
-                        }
+                            // if (!isMinimumLength(element.value, 10)) {
+                            //     error = `Your comment must contain at least 10 characters.`
+                            //     // ${lable.toLowerCase()} 
+                            //     console.log(error);
+                            // } else {
+                                console.log("Success!");
+                            // }
                     } else {
                         error = `Please enter a comment!`
                         console.log(error);
@@ -119,7 +117,12 @@ const onSubmit = event => {
     }
 
     if (success) {
-        console.log("Success! x3");
-        document.getElementById(`userName-error`).innerHTML = '<div class="text-success">Success! x3</div>'
+        document.getElementById(`userName-error`).innerHTML = '<div class="text-success">Comment posted!</div>'
     }
+}
+
+
+// onSubmit-event for form on product.html page
+const onSubmitProduct = event => {
+    event.preventDefault()
 }
