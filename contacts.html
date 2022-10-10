@@ -19,7 +19,7 @@
             <div class="nav-links">
                 <a href="./index.html">Home</a>
                 <a href="#">Categories</a>
-                <a href="#">Products</a>
+                <a href="./product-page.html">Products</a>
                 <a href="./contacts.html">Contacts</a>
             </div>
             <div class="nav-icons">
@@ -65,16 +65,24 @@
         <div class="container">
             <div class="form-holder">
                 <h1>Come in Contact with Us</h1>
-                <form id="contact-form">
+                <!-- form -->
+                <form onsubmit="onSubmit(event)" novalidate>
                     <div class="grid">
-                        <label for="user-name" class="d-none"></label>
-                        <input type="text" id="user-name" placeholder="Your Name">
-                        <label for="user-email" class="d-none"></label>
-                        <input type="email" id="user-email" placeholder="Your Mail" required>
-                        <label for="user-comments" class="d-none"></label>
-                        <textarea id="user-comments" placeholder="Comment" required></textarea>
+                        <!-- User-name -->
+                        <label for="userName-lable" class="d-none"></label>
+                        <input type="text" id="userName" placeholder="Your Name" required>
+                        <!-- user-email -->
+                        <label for="userEmail-lable" class="d-none"></label>
+                        <input type="email" id="userEmail" placeholder="Your Mail" required>
+                        <!-- user-comment -->
+                        <label for="userComment-lable" class="d-none"></label>
+                        <textarea id="userComment" placeholder="Comment" required></textarea>
+                        <!-- error-messeges -->
+                        <div id="userName-error" class="text-danger d-none"></div>
+                        <div id="userEmail-error" class="d-none"></div>
+                        <div id="userComment-error" class="d-none"></div>
                     </div>
-                    <div class="no-corners"><button class="btn-bg-theme" type="submit">Post Comment</button></div>
+                    <div class="no-corners"><button class="btn-bg-theme" type="submit" onclick="klick()">Post Comment</button></div>
                 </form>
             </div>
         </div>

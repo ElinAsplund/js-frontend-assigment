@@ -50,16 +50,16 @@
     }
 }
 
-#user-name{
+#userName{
     grid-column: 1/2;
     grid-row: 1/2;
 }
-#user-email{
+#userEmail{
     grid-column: 2/3;
     grid-row: 1/2;
 }
 
-#user-comments{
+#userComment{
     grid-column: 1/-1;
     grid-row: 2/3;
 }
