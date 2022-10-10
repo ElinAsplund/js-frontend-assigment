@@ -3,7 +3,7 @@
 
 // Säkerställer att script.js är länkad rätt.
 function klick(){
-    console.log("Klick!")
+    console.log("---KLICK!---")
 }
 
 
@@ -44,37 +44,37 @@ const isMinimumLength = (value, minLenght = 2) => {
 const onSubmit = event => {
     event.preventDefault()
     // Hindrar att default beteendet utförs (inte försöker skicka iväg formulär-datan vid klick på submit-knapp?)
-    console.log(event.target);
 
     for(let element of event.target){
-        console.log(element.type);
         if (element.required){
-            console.log("req");
-            let lable = document.getElementById(`${element.id}-lable`);
-            
+            // let lable = document.getElementById(`${element.id}-lable`).innerText;
+            let error=""
+
             switch(element.type){
                 case 'text':
-                    console.log("namn tack!");
                     if (!isNullOrEmpty(element.value)){
 
                         if (!isMinimumLength(element.value, 2)){
-                            console.log("2 tecken minst");
+                            error = `Your name must contain at least 2 letters.`
+                            // ${lable.toLowerCase()} 
+                            console.log(error);
                         } else{
-                            console.log("du angav ett namn!");
-                        }fb
+                            console.log("Success!");
+                        }
                     } else{
-                        console.log("du måste ange ett värde");
+                        error = `Please enter a name!`
+                        console.log(error);
                     }
                     break;
 
                 case 'email':
-                    console.log("email tack!");
                     break;
 
                 case 'textarea':
-                    console.log("skriv in kommentar tack!");
                     break;    
             }
+
+            document.getElementById(`${element.id}-error`).innerText = error
         }
     }
 }
