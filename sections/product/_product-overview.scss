@@ -82,11 +82,10 @@
                             padding: 0.3rem 0.8rem;
                             border: solid $color-dark 1px;
 
-                            &:hover{
-                                background-color: $color-dark;
-                                color: $color-white;
-                            // Here I would like to... onclick: keep these changes. js?
-                            }
+                            // &:hover{
+                            //     background-color: $color-dark;
+                            //     color: $color-white;
+                            // }
                         }
                     }
 
@@ -195,4 +194,9 @@
                 }
         }
     }
+}
+
+.toggle-size{
+    background-color: $color-dark !important;
+    color: $color-white !important;
 }

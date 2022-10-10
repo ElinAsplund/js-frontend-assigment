@@ -42,10 +42,12 @@
             }
         }
 
-        ul{
-            list-style-type: circle;
-            list-style-position: inside;
-            padding-left: 0;
+        .text-holder{
+            ul{
+                list-style-type: circle;
+                list-style-position: inside;
+                padding-left: 0;
+            }
         }
     }
 }

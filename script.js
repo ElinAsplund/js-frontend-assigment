@@ -50,7 +50,7 @@ const isEmailValid = email => {
 // på traditionell funktion: kan inte sätta const på!
 
 // onSubmit-event for form on contact.html page
-const onSubmit = event => {
+const onSubmitContact = event => {
     let error = ""
     let success = true
     event.preventDefault()
@@ -125,4 +125,35 @@ const onSubmit = event => {
 // onSubmit-event for form on product.html page
 const onSubmitProduct = event => {
     event.preventDefault()
+}
+
+const onClickHeadings = event => {
+    event.preventDefault()
+}
+
+//     let descriptionText= document.getElementById("description-Text")
+//     let additionalText= document.getElementById("additional-Text")
+
+//     descriptionText.style.display="none"
+//     additionalText.style.display="block !important"
+// }
+
+
+// Toggle of size buttons
+let sSize = document.getElementById("sSize")
+let mSize = document.getElementById("mSize")
+let lSize = document.getElementById("lSize")
+let xlSize = document.getElementById("xlSize")
+
+const toggleSizeS = event => {
+    sSize.classList.toggle("toggle-size")
+}
+const toggleSizeM = event => {
+    mSize.classList.toggle("toggle-size")
+}
+const toggleSizeL = event => {
+    lSize.classList.toggle("toggle-size")
+}
+const toggleSizeXL = event => {
+    xlSize.classList.toggle("toggle-size")
 }
