@@ -117,7 +117,8 @@ const onSubmitContact = event => {
     }
 
     if (success) {
-        document.getElementById(`userName-error`).innerHTML = '<div class="text-success">Comment posted!</div>'
+        document.getElementById(`successful-post`).innerHTML = '<div class="text-success">Comment posted!</div>'
+        // ToDo: nollställ alla inputfält!
     }
 }
 

@@ -69,22 +69,30 @@
                 <h1>Come in Contact with Us</h1>
                 <!-- form -->
                 <form onsubmit="onSubmitContact(event)" novalidate>
-                    <div class="grid">
+                    <div class="top-form">
                         <!-- User-name -->
-                        <label for="user-name" id="userName-label" class="d-none">Name</label>
-                        <input type="text" id="userName" placeholder="Your Name" required>
+                        <div class="input-holder">
+                            <label for="user-name" id="userName-label" class="d-none">Name</label>
+                            <input type="text" id="userName" class="" placeholder="Your Name" required>
+                            <div id="userName-error" class="text-danger error-text"></div>
+                        </div>
                         <!-- user-email -->
-                        <label for="user-email" id="userEmail-label" class="d-none">Email</label>
-                        <input type="email" id="userEmail" placeholder="Your Mail" required>
-                        <!-- user-comment -->
+                        <div class="input-holder">
+                            <label for="user-email" id="userEmail-label" class="d-none">Email</label>
+                            <input type="email" id="userEmail" class=""  placeholder="Your Mail" required>
+                            <div id="userEmail-error" class="text-danger error-text"></div>
+                        </div>
+                    </div>
+                    <!-- user-comment -->
+                    <div class="bottom-form">
                         <label for="user-comment" id="userComment-label" class="d-none">Comment</label>
                         <textarea id="userComment" placeholder="Comment" required></textarea>
+                        <div id="userComment-error" class="text-danger error-text"></div>
                     </div>
-                    <div class="no-corners"><button class="btn-bg-theme" type="submit" onclick="klick()">Post Comment</button></div>
-                    <!-- error-messeges -->
-                    <div id="userName-error" class="text-danger mt-3"></div>
-                    <div id="userEmail-error" class="text-danger"></div>
-                    <div id="userComment-error" class="text-danger"></div>
+                    <div class="btn-holder">
+                        <div class="no-corners"><button class="btn-bg-theme" type="submit" onclick="klick()">Post Comment</button></div>
+                        <div id="successful-post"></div>
+                    </div>
                 </form>
             </div>
         </div>
