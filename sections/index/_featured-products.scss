@@ -11,11 +11,64 @@
         }
         .grid{
             display: grid;
-            width: 100%;
-            height: 100%;
-            gap: 2rem;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2, 1fr);
+            gap: 1.5rem;
+            grid-template-columns: 255px;
+            grid-template-rows: repeat(4, 320px);
+            
+            
+            #featured-card-5{
+                display: none;
+            }
+            #featured-card-6{
+                display: none;
+            }
+            #featured-card-7{
+                display: none;
+            }
+            #featured-card-8{
+                display: none;
+            }
+            
+            @media (min-width: 520px){
+                width: 100%;
+                height: 100%;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(4, 320px);
+            }
+
+            @include sm{
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 320px);
+            }
+
+            @include md{
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 350px);
+                gap: 2rem;
+            }
+            
+            @include lg{
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 350px);
+                
+                #featured-card-5{
+                    display: block;
+                }
+                #featured-card-6{
+                    display: block;
+                }
+            }
+            @include xl{
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, 350px);
+
+                #featured-card-7{
+                    display: block;
+                }
+                #featured-card-8{
+                    display: block;
+                }
+            }
         }
     }
 }
