@@ -1,62 +1,61 @@
 .showcase-top{
     background-color: $color-grey-30;
 
-        .content-holder{
-            background-color: $color-grey-30;
-            width: 100%;
-            margin: auto;
+    .content-holder{
+        background-color: $color-grey-30;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+
+        @include xxxl{
+            width: 1680px;
+        }
+
+        .img-holder{
+            display: none;
+
+        @include lg{
+            display: block;
+        }    
+            img{
+                width: 100%;
+            }
+        }
+
+        .text-holder{
             display: flex;
-            justify-content: space-between;
-    
-            @include xxxl{
-                width: 1680px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 2rem auto;
+
+            h1{
+                font-size: $font-size-45;
+                font-weight: $font-weight-extrabold;
+                margin-bottom: 0.5rem;
+
+                @include sm{
+                    font-size: $font-size-65;
+                    margin-bottom: 2rem;
+                }
             }
 
-            .img-holder{
-                display: none;
+            p{
+                font-size: $font-size-18;
+                margin-bottom: 1rem;
+                width: 80%;
 
-            @include lg{
-                display: block;
-            }    
-                img{
+                @include sm{
+                    font-size: $font-size-20;
+                    margin-bottom: 2rem;
+                }
+
+                @include lg{
                     width: 100%;
                 }
             }
-    
-            .text-holder{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                margin: 2rem auto;
-    
-                h1{
-                    font-size: $font-size-45;
-                    font-weight: $font-weight-extrabold;
-                    margin-bottom: 0.5rem;
-
-                    @include sm{
-                        font-size: $font-size-65;
-                        margin-bottom: 2rem;
-                    }
-                }
-    
-                p{
-                    font-size: $font-size-18;
-                    margin-bottom: 1rem;
-                    width: 80%;
-
-                    @include sm{
-                        font-size: $font-size-20;
-                        margin-bottom: 2rem;
-                    }
-
-                    @include lg{
-                        width: 100%;
-                    }
-                }
-            }
         }
-    // }
+    }
 }
