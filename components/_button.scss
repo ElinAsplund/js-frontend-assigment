@@ -1,10 +1,15 @@
 button{
     font-weight: $font-weight-semibold;
     border: none;
-    padding: 1rem 3rem;
+    padding: 0.8rem 3rem;
     color: $color-white;
     position: relative;
+
+    @include sm{
+        padding: 1rem 3rem;
+    }
     
+    //my reference on how to make the border corners: https://stackoverflow.com/questions/60466314/how-to-do-a-partial-border-for-a-button-in-css
     &::before,
     &::after{
         position: absolute;
@@ -25,7 +30,6 @@ button{
         border-right: 2px solid $color-white;
         border-bottom: 2px solid $color-white;
     }
-    //my reference on how to make the border corners: https://stackoverflow.com/questions/60466314/how-to-do-a-partial-border-for-a-button-in-css
 
 
     &.btn-bg-theme{
@@ -88,6 +92,7 @@ button{
     }
 }
 
+// I made a class to remove the border corners.
 .no-corners{
     button{    
         &::before,
@@ -96,4 +101,3 @@ button{
         }
     }
 }
-// I made a class to remove the border corners.

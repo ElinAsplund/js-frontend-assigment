@@ -1,18 +1,18 @@
 // trying to make my own container...
 
-.big-container{
-    background-color: green;
-    width: 1680px;
-    margin-right: auto;
-    margin-left: auto; 
+// .big-container{
+//     background-color: green;
+//     width: 1680px;
+//     margin-right: auto;
+//     margin-left: auto; 
 
-    @include xl{
-        width: 1180px;
-    }
-    @include xxl{
-        width: 1680px;
-    }
-}
+//     @include xl{
+//         width: 1180px;
+//     }
+//     @include xxl{
+//         width: 1680px;
+//     }
+// }
 
 // .big-container
 // .big-container-xxl,

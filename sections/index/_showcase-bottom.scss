@@ -8,7 +8,7 @@
         grid-template-rows: 250px 250px;
         gap: 2rem;
         width: 95vw;
-        margin: 2rem 0;
+        margin: 2rem auto;
         
         @include md{
             grid-template-rows: 320px 320px;
@@ -16,106 +16,136 @@
         
         @include lg{
             display: flex;
-            justify-content: center;
+            margin: 4rem auto;
             gap: 0;
-            margin: 4rem 0;
-            grid-template-rows: 420px 420px;
+            width: 95vw;
+            border: black solid 1px;
+            // height: 100%;
         }
 
         @include xxxl{
             width: 1680px;
         }
     
-        .img-holder{
-            position: relative;
-            overflow: hidden;
+        // .help{
+        //     border: red solid 1px;
+        //     width: 95vw;
+        //     display: flex;
             
-            #showcase-bottom-first{
-                transform: scale(1.8) translate(-50px, 0);
-
-                @media (min-width: 410px){
-                    transform: scale(1.4) translate(-50px, 0);
+            .img-holder{
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+    
+                @include lg{
+                    overflow: visible;
+                    width: max-content;
+                    border: aqua solid 1px;
                 }
                 
-                @include sm{
-                    transform: scale(1) translate(0, 0);
+                img{
+                    height: 100%;
+                    width: 100%;
                 }
-            }
-
-            #showcase-bottom-second{
-                transform: scale(1.2) translate(-30px, 0);
-
-                @include sm{
-                    transform: scale(1.5) translate(30px, 30px);
+                
+                #showcase-bottom-first{
+                    position: absolute;
+                    right: 0;
+                    width: min-content;
+                    height: 100%;
+    
+                    @include lg{
+                        position: relative;
+                        width: max-content;
+                    }
+                    // transform: scale(1.8) translate(-50px, 0);
+    
+                    // @media (min-width: 410px){
+                    //     transform: scale(1.4) translate(-50px, 0);
+                    // }
+                    
+                    // @include sm{
+                    //     transform: scale(1) translate(0, 0);
+                    // }
                 }
-                @include md{
-                    transform: scale(1.5) translate(0, 30px);
+    
+                #showcase-bottom-second{
+                    position: absolute;
+                    right: 30px;
+                    width: min-content;
+                    height: 100%;
+    
+                    @include lg{
+                        position: relative;
+                        right: 0;
+                        width: max-content;
+                    }
+                    // transform: scale(1.2) translate(-30px, 0);
+    
+                    // @include sm{
+                    //     transform: scale(1.5) translate(30px, 30px);
+                    // }
+                    // @include md{
+                    //     transform: scale(1.5) translate(0, 30px);
+                    // }
+                    // @include lg{
+                    //     transform: scale(1) translate(0, 0);
+                    // }
                 }
-                @include lg{
-                    transform: scale(1) translate(0, 0);
-                }
-            }
-
-            img{
-                height: 100%;
-                width: 100%;
-            }
-
-            .text-holder{
-                position: absolute;
-                left: 0;
-                bottom: 20px;
-                text-align: center;
-                width: 100%;
-
-                @include md{ 
-                    text-align: left;                   
-                    left: 20px;
+    
+    
+                .text-holder{
+                    position: absolute;
+                    left: 0px;
                     bottom: 20px;
-                }
-    
-                @include xxl{                
-                    left: 5%;
-                    bottom: 15%;
-                }
-    
-                p{
-                    display: none;
-                    margin-bottom: 2rem;
+                    text-align: center;
                     width: 100%;
                     
-                    @include xl{
-                        width: 80%;
-                        display: block;
-                    }
-                    @include xxl{
-                        width: 50%;
-                    }
-                }
-                h1{
-                    font-weight: $font-weight-bold;
-                    font-size: $font-size-35;
-                    margin-bottom: 1rem;
-                    
                     @include sm{
-                        margin-bottom: 1.5rem;
-                        font-size: $font-size-45;
+                        left: 20px;
+                        text-align: left;                   
+                    }
+    
+                    @include md{ 
+                        left: 20px;
+                        bottom: 20px;
+                    }
+        
+                    @include xxl{                
+                        left: 5%;
+                        bottom: 15%;
+                    }
+        
+                    p{
+                        display: none;
+                        margin-bottom: 2rem;
+                        width: 100%;
+                        
+                        @include xl{
+                            width: 80%;
+                            display: block;
+                        }
+                        @include xxl{
+                            width: 50%;
+                        }
+                    }
+                    h1{
+                        font-weight: $font-weight-bold;
+                        font-size: $font-size-35;
+                        margin-bottom: 1rem;
+                        
+                        @include sm{
+                            margin-bottom: 1.5rem;
+                            font-size: $font-size-45;
+                        }
                     }
                 }
-
-                button{
-                    padding: 0.8rem 3rem;
-
-                    @include sm{
-                        padding: 1rem 3rem;
-                    }
-                }
-            }
+            // }
         }
-
     }
 }
 
+// classes to add to the img-tag
 .bg-brown{
     background-color: #cac0be;
 }
