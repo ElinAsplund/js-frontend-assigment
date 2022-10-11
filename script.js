@@ -9,7 +9,6 @@ function klick() {
 
 // Funktion som kollar/validerar om input.value har en längd på sin sträng (dvs antal tecken) som är 0 tecken. Returnerar en boolean. 
 const isNullOrEmpty = value => {
-
     if (value.length === 0)
         return true
 
@@ -28,7 +27,6 @@ const isMinimumLength = (value, minLenght = 2) => {
 const isEmailValid = email => {
     const regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     // Regual expression för email på formatet x@x.xx
-
     if (regEx.test(email))
         return true
 
@@ -51,46 +49,46 @@ const isEmailValid = email => {
 
 // onSubmit-event for form on contact.html page
 const onSubmitContact = event => {
-    let error = ""
     // Deklarerar och initierar error meddelandet till en tom sträng
-    let success = true
+    let error = ""
     // Boolean för att avgöra om valideringen är godkänd.
-    event.preventDefault()
+    let success = true
     // Hindrar att default beteendet utförs (inte försöker skicka iväg formulär-datan vid klick på submit-knapp?)
+    event.preventDefault()
 
-    for (let element of event.target) {
     // for-loop som går genom event.target(=formuläret), letar efter elementen däri och sparar dem i den initierade variabeln element
+    for (let element of event.target) {
+        // nollställer error för varje loop så att slutreslutatet ska bli "rätt"
         error = ""
-        // nollställer error för att slutreslutatet ska bli "rätt"
-        if (element.required) {
         // if-sats som kollar vilka element i formuläret som är required 
+        if (element.required) {
 
-            let label = document.getElementById(`${element.id}-label`).innerText
             // Deklarerar och initierar variabeln label som används vid utskrivning av error meddelandet
-            switch (element.type) {
+            let label = document.getElementById(`${element.id}-label`).innerText
             // switch som kollar på elementens typ ('text','email','textarea') och utför kod utifrån dessa typer. 
-                case 'text':
+            switch (element.type) {
                 // vid element.type 'text' utförs:
-                    if (!isNullOrEmpty(element.value)) {
+                case 'text':
                     // if-sats: är input inte tom?
-                        if (!isMinimumLength(element.value, 2)) {
+                    if (!isNullOrEmpty(element.value)) {
                         // if-sats: har inputen mindre än 2 tecken?
+                        if (!isMinimumLength(element.value, 2)) {
                             error = `Your ${label.toLocaleLowerCase()} must contain at least 2 letters.`
                             console.log(error);
+                            // om input har fler än 2 tecken: 
                         } else {
-                        // om input har fler än 2 tecken: 
                             console.log("Success!");
                         }
-                    } else {
                     // om input är tom:
+                    } else {
                         error = `Please enter a name!`
                         console.log(error);
                     }
                     break;
 
                 // följande case är av liknande sort som 'text' 
-                case 'email':
                 // vid element.type 'email' utförs:
+                case 'email':
                     if (!isNullOrEmpty(element.value)) {
                         if (!isEmailValid(element.value)) {
                             error = `Your ${label.toLocaleLowerCase()} must be valid (eg. example@domain.com).`
@@ -104,8 +102,8 @@ const onSubmitContact = event => {
                     }
                     break;
 
+                // vid element.type 'textarea' utförs:
                 case 'textarea':
-                // vid element.type 'text' utförs:
                     if (!isNullOrEmpty(element.value)) {
                             // if (!isMinimumLength(element.value, 10)) {
                             //     error = `Your comment must contain at least 10 characters.`
@@ -122,21 +120,22 @@ const onSubmitContact = event => {
 
             }
 
-            document.getElementById(`${element.id}-error`).innerText = error
             // skriver ut error meddelandet i domen (i "html"-koden)
+            document.getElementById(`${element.id}-error`).innerText = error
 
-            if (error !== "") {
             // if-sats som kollar om error meddelandet är en sträng med tecken => sätter success till false. 
             // Om det är en tom sträng kommer ej gå in i if-satsen och success fortsätter att vara true som den initierades till i början av funktionen.
+            if (error !== "") {
                 success = false
             }
         }
     }
 
+    // if-sats som kollar om success=true, detta är detsamma som: 
+    // if (success===true) {...}
     if (success) {
-    // if-sats som kollar om success=true
-        document.getElementById(`successful-post`).innerHTML = '<div class="text-success">Comment posted!</div>'
         // Postar ett bekräftade meddelande i domen att kommentaren är postad. 
+        document.getElementById(`successful-post`).innerHTML = '<div class="text-success">Comment posted!</div>'
 
         // ToDo: 
             // *Nollställ alla inputfält! 

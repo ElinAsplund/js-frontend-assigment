@@ -1,0 +1,105 @@
+// trying to make my own container...
+
+.big-container{
+    background-color: green;
+    width: 1680px;
+    margin-right: auto;
+    margin-left: auto; 
+
+    @include xl{
+        width: 1180px;
+    }
+    @include xxl{
+        width: 1680px;
+    }
+}
+
+// .big-container
+// .big-container-xxl,
+// .big-container-xl,
+// .big-container-lg,
+// .big-container-md,
+// .big-container-sm {
+//   --bs-gutter-x: 1.5rem;
+//   --bs-gutter-y: 0;
+//   width: 100%;
+//   padding-right: calc(var(--bs-gutter-x) * 0.5);
+//   padding-left: calc(var(--bs-gutter-x) * 0.5);
+//   margin-right: auto;
+//   margin-left: auto; 
+
+//   @media (min-width: 576px) {
+//     .big-container-sm, .big-container {
+//           max-width: 688px;
+//        }
+//   }
+//   @media (min-width: 768px) {
+//     .big-container-md, .big-container-sm, .big-container {
+//           max-width: 916px;
+//       }
+//   }
+//   @media (min-width: 992px) {
+//       .big-container-lg, .big-container-md, .big-container-sm, .big-container {
+//           max-width: 1222px;
+//       }
+//   }
+//   @media (min-width: 1200px) {
+//       .big-container-xl, .big-container-lg, .big-container-md, .big-container-sm, .big-container {
+//           max-width: 1450px;
+//        }
+//   }
+//   @media (min-width: 1400px) {
+//       .big-container-xxl, .big-container-xl, .big-container-lg, .big-container-md, .big-container-sm, .big-container {
+//           max-width: 1680px;
+//       }
+//   }
+//   @media (min-width: 1730px) {
+//       .big-container-xxxl, .big-container-xxl, .big-container-xl, .big-container-lg, .big-container-md, .big-container-sm, .big-container {
+//           max-width: 1680px;
+//       }
+//   }
+// }
+
+
+
+// .container,
+// .container-fluid,
+// .container-xxl,
+// .container-xl,
+// .container-lg,
+// .container-md,
+// .container-sm {
+//   --bs-gutter-x: 1.5rem;
+//   --bs-gutter-y: 0;
+//   width: 100%;
+//   padding-right: calc(var(--bs-gutter-x) * 0.5);
+//   padding-left: calc(var(--bs-gutter-x) * 0.5);
+//   margin-right: auto;
+//   margin-left: auto;
+// }
+
+// @media (min-width: 576px) {
+//   .container-sm, .container {
+//     max-width: 540px;
+//   }
+// }
+// @media (min-width: 768px) {
+//   .container-md, .container-sm, .container {
+//     max-width: 720px;
+//   }
+// }
+// @media (min-width: 992px) {
+//   .container-lg, .container-md, .container-sm, .container {
+//     max-width: 960px;
+//   }
+// }
+// @media (min-width: 1200px) {
+//   .container-xl, .container-lg, .container-md, .container-sm, .container {
+//     max-width: 1140px;
+//   }
+// }
+// @media (min-width: 1400px) {
+//   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+//     max-width: 1320px;
+//   }
+// }
