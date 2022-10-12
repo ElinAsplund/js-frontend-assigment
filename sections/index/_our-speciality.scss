@@ -3,13 +3,24 @@
     
     .speciality-holder{
         background-color: $color-grey-20;
-        width: 1680px;
+        width: 95vw;
         margin: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 3rem;
 
+        @include sm{
+            width: min-content;
+        }
+
+        @include xl{
+            width: 95vw;
+        }
+
+        @include xxxl{
+            width: 1680px;
+        }
 
         h2{
            font-size: $font-size-20;
@@ -18,22 +29,47 @@
         }
 
         .card-holder{
-            display: flex;
-            justify-content: space-between;
             width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 200px);
+            gap: 2rem;
 
+            @include sm{
+                grid-template-columns: 500px;
+                grid-template-rows: repeat(3, 200px);
+                width: max-content;
+            }
+            @include xl{
+                width: 100%;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 200px;
+            }
+            @include xxl{
+                grid-template-rows: 250px;
+            }
+            
             .special-card{
                 display: flex;
-    
+                
                 .text-holder{
-                    width: 245px;
-                    height: 245px;
+                    width: 100%;
+                    height: 100%;
                     background-color: $color-white;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    padding: 2rem;
-    
+                    padding: 1rem;
+                    text-align: center;
+                    
+                    @include sm{
+                        width: 50%;
+                        text-align: left;
+                    }
+                    @include xxl{
+                        padding: 2rem;
+                    }
+                    
                     p{
                         font-size: $font-size-20;
                         font-weight: $font-weight-semibold;
@@ -41,25 +77,30 @@
         
                     a{
                         color: $color-dark;
-        
+                        
                         &:hover{
                             color: $color-theme;
-
+                            
                             i{
                                 color: $color-theme;
                             }
                         }
-
+                        
                         i{
                             text-decoration: underline;
                         }
                     }
                 }
-    
+                
                 .placeholder-area{
-                    width: 245px;
-                    height: 245px;
+                    display: none;
+                    height: 100%;
                     background-color: $color-grey-60;
+
+                    @include sm{
+                        display: block;
+                        width: 50%;
+                    }
                 }
             }
         }
