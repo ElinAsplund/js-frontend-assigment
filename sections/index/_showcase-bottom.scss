@@ -36,8 +36,8 @@
             
             #showcase-bottom-first{
                 position: absolute;
-                right: 0;
                 width: min-content;
+                right: 0;
                 height: 100%;
 
                 @include lg{
@@ -53,8 +53,8 @@
 
             #showcase-bottom-second{
                 position: absolute;
-                right: 30px;
                 width: min-content;
+                right: 0;
                 height: 100%;
 
                 @include lg{

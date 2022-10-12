@@ -57,9 +57,9 @@
                         background-color: $color-dark;
     
                         img{
+                            // I used this generator: 
+                            // https://codepen.io/sosuke/pen/Pjoqqp
                             filter: invert(93%) sepia(0%) saturate(7474%) hue-rotate(61deg) brightness(107%) contrast(107%);                        
-                        // I used this generator: 
-                        // https://codepen.io/sosuke/pen/Pjoqqp
                         }
                     }
                 }
