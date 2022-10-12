@@ -74,23 +74,17 @@
         #text-holder-left{
             position: absolute;
             width: 100%;
-            right: 0%;
-            bottom: 20%;
+            right: 0;
+            bottom: 30px;
 
             @include sm{
                 width: max-content;
-                right: 5%;
-                bottom: 15%;
+                right: 20px;
+                bottom: 20px;
             }
-            
-            @include lg{
-                right: 5%;
-                bottom: 10%;
-            }
-
-            @include xxxl{
-                right: 10%;
+            @include xxl{
                 bottom: 30%;
+                right: 10%;
             }
 
             h1{
@@ -101,21 +95,15 @@
         #text-holder-right{
             position: absolute;
             width: 100%;
-            left: 0%;
-            bottom: 20%;
+            left: 0;
+            bottom: 30px;
 
             @include sm{
                 width: max-content;
-                left: 5%;
-                bottom: 15%;
+                left: 20px;
+                bottom: 20px;
             }
-
-            @include lg{
-                left: 5%;
-                bottom: 10%;
-            }
-
-            @include xxxl{
+            @include xxl{
                 left: 10%;
                 bottom: 30%;
             }

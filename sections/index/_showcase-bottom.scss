@@ -18,129 +18,99 @@
             display: flex;
             margin: 4rem auto;
             gap: 0;
-            width: 95vw;
-            border: black solid 1px;
-            // height: 100%;
         }
 
         @include xxxl{
             width: 1680px;
         }
-    
-        // .help{
-        //     border: red solid 1px;
-        //     width: 95vw;
-        //     display: flex;
             
-            .img-holder{
-                position: relative;
-                width: 100%;
-                overflow: hidden;
-    
+        .img-holder{
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+
+            @include lg{
+                width: fit-content;
+            }
+            
+            
+            #showcase-bottom-first{
+                position: absolute;
+                right: 0;
+                width: min-content;
+                height: 100%;
+
                 @include lg{
-                    overflow: visible;
-                    width: max-content;
-                    border: aqua solid 1px;
-                }
-                
-                img{
-                    height: 100%;
+                    position: relative;
                     width: 100%;
+                    transform: translate(0, 11px);
                 }
-                
-                #showcase-bottom-first{
-                    position: absolute;
+
+                @include xl{
+                    transform: translate(0, 0);
+                }
+            }
+
+            #showcase-bottom-second{
+                position: absolute;
+                right: 30px;
+                width: min-content;
+                height: 100%;
+
+                @include lg{
+                    position: relative;
                     right: 0;
-                    width: min-content;
-                    height: 100%;
-    
-                    @include lg{
-                        position: relative;
-                        width: max-content;
-                    }
-                    // transform: scale(1.8) translate(-50px, 0);
-    
-                    // @media (min-width: 410px){
-                    //     transform: scale(1.4) translate(-50px, 0);
-                    // }
-                    
-                    // @include sm{
-                    //     transform: scale(1) translate(0, 0);
-                    // }
-                }
-    
-                #showcase-bottom-second{
-                    position: absolute;
-                    right: 30px;
-                    width: min-content;
-                    height: 100%;
-    
-                    @include lg{
-                        position: relative;
-                        right: 0;
-                        width: max-content;
-                    }
-                    // transform: scale(1.2) translate(-30px, 0);
-    
-                    // @include sm{
-                    //     transform: scale(1.5) translate(30px, 30px);
-                    // }
-                    // @include md{
-                    //     transform: scale(1.5) translate(0, 30px);
-                    // }
-                    // @include lg{
-                    //     transform: scale(1) translate(0, 0);
-                    // }
-                }
-    
-    
-                .text-holder{
-                    position: absolute;
-                    left: 0px;
-                    bottom: 20px;
-                    text-align: center;
                     width: 100%;
+                    transform: translate(0, 11px);
+                }
+
+                @include xl{
+                    transform: translate(0, 0);
+                }
+            }
+
+
+            .text-holder{
+                position: absolute;
+                left: 0;
+                bottom: 30px;
+                text-align: center;
+                width: 100%;
+                
+                @include sm{
+                    left: 20px;
+                    bottom: 20px;
+                    text-align: left;                   
+                }
+                @include xxl{                
+                    left: 5%;
+                    bottom: 15%;
+                }
+    
+                p{
+                    display: none;
+                    margin-bottom: 2rem;
+                    width: 100%;
+                    
+                    @include xl{
+                        width: 80%;
+                        display: block;
+                    }
+                    @include xxl{
+                        width: 50%;
+                    }
+                }
+                h1{
+                    font-weight: $font-weight-bold;
+                    font-size: $font-size-35;
+                    margin-bottom: 1rem;
                     
                     @include sm{
-                        left: 20px;
-                        text-align: left;                   
-                    }
-    
-                    @include md{ 
-                        left: 20px;
-                        bottom: 20px;
-                    }
-        
-                    @include xxl{                
-                        left: 5%;
-                        bottom: 15%;
-                    }
-        
-                    p{
-                        display: none;
-                        margin-bottom: 2rem;
-                        width: 100%;
-                        
-                        @include xl{
-                            width: 80%;
-                            display: block;
-                        }
-                        @include xxl{
-                            width: 50%;
-                        }
-                    }
-                    h1{
-                        font-weight: $font-weight-bold;
-                        font-size: $font-size-35;
-                        margin-bottom: 1rem;
-                        
-                        @include sm{
-                            margin-bottom: 1.5rem;
-                            font-size: $font-size-45;
-                        }
+                        margin-bottom: 1.5rem;
+                        font-size: $font-size-45;
                     }
                 }
-            // }
+            }
         }
     }
 }
