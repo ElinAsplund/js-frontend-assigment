@@ -4,6 +4,7 @@
     .speciality-holder{
         background-color: $color-grey-20;
         width: 95vw;
+        max-width: 1680px;
         margin: auto;
         display: flex;
         flex-direction: column;
@@ -18,10 +19,6 @@
         }
         @include xl{
             width: 95vw;
-        }
-
-        @include xxxl{
-            width: 1680px;
         }
 
         h2{

@@ -56,6 +56,9 @@ const onSubmitContact = event => {
     // Hindrar att default beteendet utförs (inte försöker skicka iväg formulär-datan vid klick på submit-knapp?)
     event.preventDefault()
 
+    // Nollställer successful-post fältet om klickar på sobmit-knappen igen
+    document.getElementById(`successful-post`).innerText = ''
+
     // for-loop som går genom event.target(=formuläret), letar efter elementen däri och sparar dem i den initierade variabeln element
     for (let element of event.target) {
         // nollställer error för varje loop så att slutreslutatet ska bli "rätt"
@@ -135,7 +138,7 @@ const onSubmitContact = event => {
     // if (success===true) {...}
     if (success) {
         // Postar ett bekräftade meddelande i domen att kommentaren är postad. 
-        document.getElementById(`successful-post`).innerHTML = '<div class="text-success">Comment posted!</div>'
+        document.getElementById(`successful-post`).innerText = 'Comment posted!'
 
         // ToDo: 
             // *Nollställ alla inputfält! 

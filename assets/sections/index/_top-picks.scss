@@ -8,6 +8,7 @@
         grid-template-rows: 250px 250px;
         gap: 2rem;
         width: 95vw;
+        max-width: 1680px;
         margin: 2rem auto;
 
         @include md{
@@ -23,12 +24,6 @@
         @include xl{
             height: min-content;
         }
-
-        @include xxxl{
-            width: 1680px;
-        }
-    
-
 
         .img-holder{
             position: relative;

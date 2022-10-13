@@ -4,11 +4,9 @@
     display: flex;
     flex-direction: column;
     max-width: 1680px;
-    // border: 1px solid green;
     
     .grid-holder{
         width: 1500px;
-        // border: 1px solid blue;
 
         .two-for-holder{
             background-color: $color-grey-60;
@@ -34,7 +32,6 @@
             gap: 2rem;
             grid-template-columns: 1fr;
             grid-template-rows: 250px;
-            // border: 1px solid red;
             
             @include sm{                
                 grid-template-columns: repeat(2, 1fr);
