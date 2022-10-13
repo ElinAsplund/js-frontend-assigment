@@ -1,7 +1,13 @@
 .highlight-sale{
+    background-color: $color-grey-70;
+    
+    @include sm{
+        background-color: $color-white;
+    }
     .container{
         margin-top: 4rem;
         margin-bottom: 4rem;
+        text-align: center;
 
         .content-holder{
             display: flex;
