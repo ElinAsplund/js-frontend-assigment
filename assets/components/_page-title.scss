@@ -17,12 +17,23 @@
             font-weight: $font-weight-medium;
             text-decoration: none;
             color: $color-dark;
-            margin-left: 0.5rem;
             padding-top: 0.2rem;
+            margin-bottom: 4px;
             transition: 0.2s ease-in-out;
-
+            
             &:hover{
                 color: $color-theme;
+                text-decoration: underline;
+                
+                i{
+                    transition: 0.25s ease-in-out;
+                    color: $color-theme;
+                }
+            }
+            
+            i{
+                font-size: $font-size-20;
+                margin-right: 0.5rem;
             }
         }
 
