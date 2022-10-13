@@ -1,7 +1,7 @@
 .highlight-sale{
     background-color: $color-grey-70;
     
-    @include sm{
+    @include lg{
         background-color: $color-white;
     }
     .container{
