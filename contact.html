@@ -65,36 +65,37 @@
     <!-- contact-form -->
     <section class="contact-form">
         <div class="container">
-            <div class="form-holder">
-                <h1>Come in Contact with Us</h1>
-                <!-- form -->
-                <form onsubmit="onSubmitContact(event)" novalidate>
-                    <div class="top-form">
-                        <!-- User-name -->
-                        <div class="input-holder">
-                            <label for="user-name" id="userName-label" class="d-none">Name</label>
-                            <input type="text" id="userName" class="" placeholder="Your Name" required>
-                            <div id="userName-error" class="text-danger error-text"></div>
-                        </div>
-                        <!-- user-email -->
-                        <div class="input-holder">
-                            <label for="user-email" id="userEmail-label" class="d-none">Email</label>
-                            <input type="email" id="userEmail" class=""  placeholder="Your Mail" required>
-                            <div id="userEmail-error" class="text-danger error-text"></div>
-                        </div>
+            <h1>Come in Contact with Us</h1>
+            <!-- form -->
+            <form onsubmit="onSubmitContact(event)" novalidate>
+                <div class="top-form">
+                    <!-- User-name -->
+                    <div class="input-holder">
+                        <label for="user-name" id="userName-label" class="d-none">Name</label>
+                        <input type="text" id="userName" class="" placeholder="Your Name" required>
+                        <div id="userName-error" class="error-text"></div>
                     </div>
+                    <!-- user-email -->
+                    <div class="input-holder">
+                        <label for="user-email" id="userEmail-label" class="d-none">Email</label>
+                        <input type="email" id="userEmail" class=""  placeholder="Your Mail" required>
+                        <div id="userEmail-error" class="error-text"></div>
+                    </div>
+                </div>
+                <div class="bottom-form">
                     <!-- user-comment -->
-                    <div class="bottom-form">
+                    <div class="textarea-holder">
                         <label for="user-comment" id="userComment-label" class="d-none">Comment</label>
                         <textarea id="userComment" placeholder="Comment" required></textarea>
-                        <div id="userComment-error" class="text-danger error-text"></div>
+                        <div id="userComment-error" class="error-text"></div>
                     </div>
-                    <div class="btn-holder">
-                        <div class="no-corners"><button class="btn-bg-theme" type="submit" onclick="klick()">Post Comment</button></div>
+                    <!-- submit-button -->
+                    <div class="no-corners">
+                        <button class="btn-bg-theme" type="submit" onclick="klick()">Post Comment</button>
                         <div id="successful-post"></div>
                     </div>
-                </form>
-            </div>
+                </div>
+            </form>
         </div>
     </section>
     <!-- footer -->

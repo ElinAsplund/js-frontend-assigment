@@ -94,6 +94,8 @@ button{
 
 // I made a class to remove the border corners.
 .no-corners{
+    display: inline-block;
+    
     button{    
         &::before,
         &::after{

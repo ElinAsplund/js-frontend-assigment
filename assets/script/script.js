@@ -91,7 +91,7 @@ const onSubmitContact = event => {
                 case 'email':
                     if (!isNullOrEmpty(element.value)) {
                         if (!isEmailValid(element.value)) {
-                            error = `Your ${label.toLocaleLowerCase()} must be valid (eg. example@domain.com).`
+                            error = `Your ${label.toLocaleLowerCase()} must be valid.`
                             console.log(error);
                         } else {
                             console.log("Success!");

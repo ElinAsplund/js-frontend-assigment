@@ -2,108 +2,68 @@
     .container{
         margin-top: 4rem;
         margin-bottom: 4rem;
-        
-        .form-holder{
-            h1{
-                font-size: $font-size-18;
-                font-weight: $font-weight-bold;
-                margin-bottom: 0rem;
-            }
 
-            form{
-                // .grid{
-                    // display: grid;
-                    // width: 100%;
-                    // height: 250px;
-                    // gap: 1.5rem;
-                    // grid-template-columns: 1fr 1fr;
-                    // grid-template-rows: 1fr 5fr;
-                // }
+        h1{
+            font-size: $font-size-18;
+            font-weight: $font-weight-bold;
+            margin-bottom: 0rem;
+        }
 
-                .top-form{
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-template-rows: 1fr;
-                    gap: 2.5rem;
-                    margin-top: 1rem;
+        form{
 
-                    .input-holder{
+            .top-form{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                gap: 2.5rem;
+                margin-top: 1rem;
+
+                .input-holder{
+                    width: 100%;
+
+                    input{
+                        border: solid 1px $color-grey-40;
+                        padding: 0.5rem 1rem;
                         width: 100%;
-                        position: relative;
-    
-                        input{
-                            padding: 0.5rem 1rem;
-                            border: solid 1px $color-grey-40;
-                            width: 100%;
-                            margin-bottom: 2.5rem;
-    
-                            &:focus{
-                                outline-color: $color-grey-40;
-                            }
-                        }
-                        .error-text{
-                            position: absolute;
-                            bottom: 0.7rem;
-                            left: 0.5rem;
+
+                        &:focus{
+                            outline-color: $color-grey-40;
                         }
                     }
                 }
+            }
+            
+            .bottom-form{
+                width: 100%;
                 
-                .bottom-form{
-                    position: relative;
-                    width: 100%;
-                    height: 10rem;
-                    margin-bottom: 2.5rem;
-
+                .textarea-holder{
                     textarea{
-                        position: relative;
                         padding: 0.5rem 1rem;
                         line-height: normal;
                         border: solid 1px $color-grey-40;
                         resize: none;
                         width: 100%;
-                        height: 100%;
+                        height: 10rem;
+                        margin-top: 1rem;
                         
                         &:focus{
                             outline-color: $color-grey-40;
                         }
                     }
-
-                    .error-text{
-                        position: absolute;
-                        left: 0.5rem;
-                        bottom: -1.8rem;
-                    }
-
                 }
-                
-                .btn-holder{
-                    position: relative;
-
-                    button{
-                        margin: 0rem;
-                    }
-                    #successful-post{
-                        position: absolute;
-                        left: 0.5rem;
-                        bottom: -1.8rem;
-                    }
+                button{
+                    margin-top: 1rem;
                 }
-            }
+                #successful-post{
+                    margin-top: 1rem;
+                }
+            } 
         }
     }
 }
 
-// #userName{
-//     grid-column: 1/2;
-//     grid-row: 1/2;
-// }
-// #userEmail{
-//     grid-column: 2/3;
-//     grid-row: 1/2;
-// }
-
-// #userComment{
-//     grid-column: 1/-1;
-//     grid-row: 2/3;
-// }
+// For error-text
+.error-text{
+    margin: 0.5rem 0;
+    color: $color-theme;
+}
