@@ -1,10 +1,23 @@
 .webshop-info{
+    width: 95vw;
+    margin: auto;
+
+    @include sm{
+        width: 100%;
+    }
+
     .container{
         border-top: 1px solid $color-grey-30;
         padding-top: 4rem;
         padding-bottom: 4rem;
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        
+        @include sm{                
+            display: flex;
+            justify-content: space-between;
+        }
 
         .content-holder{
             display: flex;
@@ -24,13 +37,27 @@
             }
 
             h2{
-                font-size: $font-size-20;
+                font-size: $font-size-16;
                 font-weight: $font-weight-bold;
+                text-align: center;
+                width: 75%;
+
+                @include md{
+                    font-size: $font-size-20;
+                }
+                @include xl{
+                    width: 100%;
+                }
             }
 
             p{
+                display: none;
                 text-align: center;
                 width: 80%;
+
+                @include xl{
+                    display: block;
+                }
             }
         }
     }
