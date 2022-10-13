@@ -50,6 +50,11 @@ header{
                 &:hover{
                     color: $color-theme;
                 }
+
+            }
+            
+            .active{
+                color: $color-theme;
             }
         }
 
