@@ -1,31 +1,37 @@
-@import "./core/variables";
-@import "./core/breakpoints";
-@import "./core/big-container";
+// Core
+@import "./assets/core/variables";
+@import "./assets/core/breakpoints";
+@import "./assets/core/big-container";
 
-@import "./components/button";
-@import "./components/small-card";
-@import "./components/mini-card";
-@import "./components/header";
-@import "./components/footer";
-@import "./components/page-title";
+// Components
+@import "./assets/components/button";
+@import "./assets/components/small-card";
+@import "./assets/components/mini-card";
+@import "./assets/components/header";
+@import "./assets/components/footer";
+@import "./assets/components/page-title";
 
-@import "./sections/index/showcase-top";
-@import "./sections/index/showcase-bottom";
-@import "./sections/index/featured-products";
-@import "./sections/index/top-picks";
-@import "./sections/index/our-speciality";
-@import "./sections/index/two-for-price-of";
-@import "./sections/index/highlight-sale";
-@import "./sections/index/chosen-categories";
-@import "./sections/index/webshop-info";
+// Sections: index.html
+@import "./assets/sections/index/showcase-top";
+@import "./assets/sections/index/showcase-bottom";
+@import "./assets/sections/index/featured-products";
+@import "./assets/sections/index/top-picks";
+@import "./assets/sections/index/our-speciality";
+@import "./assets/sections/index/two-for-price-of";
+@import "./assets/sections/index/highlight-sale";
+@import "./assets/sections/index/chosen-categories";
+@import "./assets/sections/index/webshop-info";
 
-@import "./sections/contact/contact-form";
+// Sections: contact.html
+@import "./assets/sections/contact/contact-form";
 
-@import "./sections/product/current-offer-banner";
-@import "./sections/product/product-overview";
-@import "./sections/product/product-in-deph-info";
-@import "./sections/product/related-products";
+// Sections: product.html
+@import "./assets/sections/product/current-offer-banner";
+@import "./assets/sections/product/product-overview";
+@import "./assets/sections/product/product-in-deph-info";
+@import "./assets/sections/product/related-products";
 
+// Settings for the whole document
 *{
     padding: 0;
     margin: 0;
