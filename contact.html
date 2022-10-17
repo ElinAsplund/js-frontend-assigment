@@ -72,13 +72,13 @@
                     <!-- User-name -->
                     <div class="input-holder">
                         <label for="user-name" id="userName-label" class="d-none">Name</label>
-                        <input type="text" id="userName" class="" placeholder="Your Name" required>
+                        <input type="text" id="userName" placeholder="Your Name" onkeyup="validate(event)" required>
                         <div id="userName-error" class="error-text"></div>
                     </div>
                     <!-- user-email -->
                     <div class="input-holder">
                         <label for="user-email" id="userEmail-label" class="d-none">Email</label>
-                        <input type="email" id="userEmail" class=""  placeholder="Your Mail" required>
+                        <input type="email" id="userEmail" class=""  placeholder="Your Mail" onkeyup="validate(event)" required>
                         <div id="userEmail-error" class="error-text"></div>
                     </div>
                 </div>
@@ -86,13 +86,13 @@
                     <!-- user-comment -->
                     <div class="textarea-holder">
                         <label for="user-comment" id="userComment-label" class="d-none">Comment</label>
-                        <textarea id="userComment" placeholder="Comment" required></textarea>
+                        <textarea id="userComment" placeholder="Comment" onkeyup="validate(event)" required></textarea>
                         <div id="userComment-error" class="error-text"></div>
                     </div>
                     <!-- submit-button -->
                     <div class="btn-no-corners">
-                        <button class="btn-bg-theme" type="submit" onclick="klick()">Post Comment</button>
-                        <div id="successful-post" class="text-success"></div>
+                        <button class="btn-bg-theme" type="submit" onclick="onClick()">Post Comment</button>
+                        <div id="successful-post"></div>
                     </div>
                 </div>
             </form>

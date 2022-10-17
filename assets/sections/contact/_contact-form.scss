@@ -67,3 +67,12 @@
     margin: 0.5rem 0;
     color: $color-theme;
 }
+
+.error-input{
+    color: $color-theme;
+    border: solid 1px $color-theme !important;
+
+    &:focus{
+        outline-color: #fe8d8d !important;
+    }
+}

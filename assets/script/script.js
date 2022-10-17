@@ -1,13 +1,10 @@
-// ATT FÖRSTÅ JS
-// ----------------------------------------------------------------------------------------------------------
-
-// Säkerställer att script.js är länkad rätt.
-function klick() {
-    console.log("---KLICK!---")
+function onClick() {
+    console.log("---CLICK!---")
 }
 
+// Validation of contact-form
+// --------------------------------------------------------------------------------------------------------------
 
-// Funktion som kollar/validerar om input.value har en längd på sin sträng (dvs antal tecken) som är 0 tecken. Returnerar en boolean. 
 const isNullOrEmpty = value => {
     if (value.length === 0)
         return true
@@ -15,7 +12,6 @@ const isNullOrEmpty = value => {
     return false
 }
 
-// Funktion som kollar/validerar om input.value har en längd på sin sträng (dvs antal tecken) som är minst 2 tecken lång. Returnerar en boolean. 
 const isMinimumLength = (value, minLenght = 2) => {
     if (value.length >= minLenght)
         return true
@@ -23,162 +19,128 @@ const isMinimumLength = (value, minLenght = 2) => {
     return false
 }
 
-// Funktion som kollar/validerar om input.value är på formatet x@x.xx returnerar en boolean. 
 const isEmailValid = email => {
+    // Regual expression x@x.xx
     const regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    // Regual expression för email på formatet x@x.xx
     if (regEx.test(email))
         return true
 
     return false
 }
 
-// arrow function 
-// const onSubmit = event => {
-//         event.preventDefault()
-//         console.log(event)
-//     }
-// måste const vara med? functionen funkar utan const, varför använder Hans const på en function?
+const isNameValid = name => {
+    // Regual expression, checking if name has any numbers in it. ÅÄÖ do not work!
+    // https://stackoverflow.com/questions/18650972/javascript-validation-for-non-empty-number-and-alphabets
+    // With ÅÄÖ working:
+    // https://stackoverflow.com/questions/36366125/include-special-characters-like-%C3%B6-%C3%A4-%C3%BC-in-regular-expressions
+    const regEx = /^[a-zA-Z\u0080-\uFFFF]*$/;
 
-// traditional function
-// function onSubmit(event){
-//     event.preventDefault()
-//     console.log(event)
-// }
-// på traditionell funktion: kan inte sätta const på!
+    if (regEx.test(name))
+        return true
 
-// onSubmit-event for form on contact.html page
+    return false
+}
+
+// WILL NOT WORK CORRECT IF USER CLICK SUBMIT-BUTTON BEFORE ENTERING THE INPUT FIELDS
 const onSubmitContact = event => {
-    // Deklarerar och initierar error meddelandet till en tom sträng
-    let error = ""
-    // Boolean för att avgöra om valideringen är godkänd.
-    let success = true
-    // Hindrar att default beteendet utförs (inte försöker skicka iväg formulär-datan vid klick på submit-knapp?)
     event.preventDefault()
+    document.getElementById(`successful-post`).innerText = 'Please fill in the form correctly!'
+    document.getElementById("successful-post").classList.add("error-text")
+    document.getElementById("successful-post").classList.remove("text-success")
 
-    // Nollställer successful-post fältet om klickar på sobmit-knappen igen
-    document.getElementById(`successful-post`).innerText = ''
+    if (document.getElementById("userName-error").innerText === "" &&
+    document.getElementById("userEmail-error").innerText === "" &&
+    document.getElementById("userComment-error").innerText === ""){
+            document.getElementById(`successful-post`).innerText = 'Comment posted!'
+            document.getElementById("successful-post").classList.remove("error-text")
+            document.getElementById("successful-post").classList.add("text-success")
+    }
 
-    // for-loop som går genom event.target(=formuläret), letar efter elementen däri och sparar dem i den initierade variabeln element
-    for (let element of event.target) {
-        // nollställer error för varje loop så att slutreslutatet ska bli "rätt"
-        error = ""
-        // if-sats som kollar vilka element i formuläret som är required 
-        if (element.required) {
+    //     // ToDo:
+    //         // *Nollställ alla inputfält! 
+    //         // *Skicka data till server?
+    // }
+}
 
-            // Deklarerar och initierar variabeln label som används vid utskrivning av error meddelandet
-            let label = document.getElementById(`${element.id}-label`).innerText
-            // switch som kollar på elementens typ ('text','email','textarea') och utför kod utifrån dessa typer. 
+
+
+const validate = (event) => {
+    let error = ""
+    let element =event.target
+    let label = document.getElementById(`${element.id}-label`).innerText
+
+    switch(event.type) {
+        case "submit":
+            onSubmitContact(event)
+            break;
+
+        case "keyup":
+
             switch (element.type) {
-                // vid element.type 'text' utförs:
+                // NAME
                 case 'text':
-                    // if-sats: är input inte tom?
                     if (!isNullOrEmpty(element.value)) {
-                        // if-sats: har inputen mindre än 2 tecken?
                         if (!isMinimumLength(element.value, 2)) {
-                            error = `Your ${label.toLocaleLowerCase()} must contain at least 2 letters.`
+                            error += `Your ${label.toLocaleLowerCase()} must contain at least 2 letters.`
                             console.log(error);
-                            // om input har fler än 2 tecken: 
-                        } else {
-                            console.log("Success!");
-                        }
-                    // om input är tom:
+                            document.getElementById("userName").classList.add("error-input")
+                        } 
+
+                        if (!isNameValid(element.value)) {
+                            error += ` Your ${label.toLocaleLowerCase()} can only contain letters.`
+                            console.log(error);
+                            document.getElementById("userName").classList.add("error-input")
+                        } 
+  
                     } else {
-                        error = `Please enter a name!`
+                        error = `Please enter a ${label.toLocaleLowerCase()}!`
                         console.log(error);
+                    }
+                    document.getElementById(`${element.id}-error`).innerText = error
+
+                    if(error===""){
+                        document.getElementById("userName").classList.remove("error-input")
                     }
                     break;
 
-                // följande case är av liknande sort som 'text' 
-                // vid element.type 'email' utförs:
+                // EMAIL
                 case 'email':
                     if (!isNullOrEmpty(element.value)) {
                         if (!isEmailValid(element.value)) {
-                            error = `Your ${label.toLocaleLowerCase()} must be valid.`
+                            error = `Please enter a valid ${label.toLocaleLowerCase()}.`
                             console.log(error);
-                        } else {
-                            console.log("Success!");
-                        }
+                            document.getElementById("userEmail").classList.add("error-input")
+                        } 
+
                     } else {
-                        error = `Please enter an email!`
+                        error = `Please enter an ${label.toLocaleLowerCase()}!`
                         console.log(error);
+                        document.getElementById("userEmail").classList.add("error-input")
+                    }
+                    document.getElementById(`${element.id}-error`).innerText = error
+
+                    if(error===""){
+                        document.getElementById("userEmail").classList.remove("error-input")
                     }
                     break;
-
-                // vid element.type 'textarea' utförs:
+                
+                // COMMENT
                 case 'textarea':
-                    if (!isNullOrEmpty(element.value)) {
-                            // if (!isMinimumLength(element.value, 10)) {
-                            //     error = `Your comment must contain at least 10 characters.`
-                            //     // ${lable.toLowerCase()} 
-                            //     console.log(error);
-                            // } else {
-                                console.log("Success!");
-                            // }
-                    } else {
-                        error = `Please enter a comment!`
+                    if (isNullOrEmpty(element.value)) {
+                        error = `Please enter a ${label.toLocaleLowerCase()}!`
+                        document.getElementById("userComment").classList.add("error-input")
                         console.log(error);
+                    } 
+                    document.getElementById(`${element.id}-error`).innerText = error
+
+                    if(error===""){
+                        document.getElementById("userComment").classList.remove("error-input")
                     }
                     break;
-
             }
 
-            // skriver ut error meddelandet i domen (i "html"-koden)
-            document.getElementById(`${element.id}-error`).innerText = error
-
-            // if-sats som kollar om error meddelandet är en sträng med tecken => sätter success till false. 
-            // Om det är en tom sträng kommer ej gå in i if-satsen och success fortsätter att vara true som den initierades till i början av funktionen.
-            if (error !== "") {
-                success = false
-            }
-        }
-    }
-
-    // if-sats som kollar om success=true, detta är detsamma som: 
-    // if (success===true) {...}
-    if (success) {
-        // Postar ett bekräftade meddelande i domen att kommentaren är postad. 
-        document.getElementById(`successful-post`).innerText = 'Comment posted!'
-
-        // ToDo: 
-            // *Nollställ alla inputfält! 
-            // *Skicka data till server?
+            break;
     }
 }
 
-
-// onSubmit-event for form on product.html page
-const onSubmitProduct = event => {
-    event.preventDefault()
-}
-
-const onClickHeadings = event => {
-    event.preventDefault()
-}
-// EV KOD SOM VILL SPARA??
-//     let descriptionText= document.getElementById("description-Text")
-//     let additionalText= document.getElementById("additional-Text")
-
-//     descriptionText.style.display="none"
-//     additionalText.style.display="block !important"
-// }
-
-
-// Toggle of size buttons
-let sSize = document.getElementById("sSize")
-let mSize = document.getElementById("mSize")
-let lSize = document.getElementById("lSize")
-let xlSize = document.getElementById("xlSize")
-
-const toggleSizeS = event => {
-    sSize.classList.toggle("toggle-size")
-}
-const toggleSizeM = event => {
-    mSize.classList.toggle("toggle-size")
-}
-const toggleSizeL = event => {
-    lSize.classList.toggle("toggle-size")
-}
-const toggleSizeXL = event => {
-    xlSize.classList.toggle("toggle-size")
-}
+// --------------------------------------------------------------------------------------------------------------
